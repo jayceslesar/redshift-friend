@@ -1,0 +1,28 @@
+[project]
+name = "redshift-friend"
+version = "0.1.0"
+description = "Tools to make Redshift your friend :)"
+authors = [
+    {name = "Jayce", email = "jaycesles@gmail.com"},
+]
+dependencies = [
+    "alembic>=1.13.1",
+    "sqlalchemy>=2.0.30",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.10.0",
+    "ruff>=0.4.4",
+    "aws-cdk-lib>=2.141.0",
+]
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
